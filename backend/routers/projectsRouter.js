@@ -1,10 +1,13 @@
 // /projects
 const express = require('express');
 const router = express.Router();
-const { getProjects, getProjectById } = require('../controllers/projectsController');
+const { getProjects, getProjectBySlug, setProject, updateProject } = require('../controllers/projectsController');
 
 router
     .get('/', getProjects)
-    .get('/:projectId', getProjectById)
+    .post('/', setProject)
+    .get('/:slug', getProjectBySlug)
+    .put('/:slug', updateProject);
+
 
 module.exports = router;
