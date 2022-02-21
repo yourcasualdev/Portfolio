@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 40px;
+}
+
+.text {
+    font-family: "Montserrat";
+    text-align: center;
+    padding-top: 10vh;
+}
