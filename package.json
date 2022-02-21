@@ -1,0 +1,18 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Simple portfolio site for showing my projects",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/nightvision53/portfolio"
+  },
+  "author": "Ibrahim BABAL",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
