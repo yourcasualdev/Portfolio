@@ -1,14 +1,17 @@
 import './HeaderStyle.css'
 import logo from "./BABAL.svg"
+
+import { Link } from "react-router-dom";
+
 const Header = () => {
     return (
         <header className="Header">
-            <img className="logo" src={logo} alt="Logo" />
+            <a href='/'><img className="logo" src={logo} alt="Logo" /></a>
             <nav>
                 <ul className="nav__links">
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><Link to="/projects">Projects</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/blog">Blog</Link></li>
                 </ul>
             </nav>
             <a className="cta" href="#"><button>Contact</button></a>
