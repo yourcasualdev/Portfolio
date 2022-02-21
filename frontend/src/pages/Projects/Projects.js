@@ -1,6 +1,5 @@
 import React from 'react'
 import Header from "../../components/Header/Header";
-import Section from "../../components/Section/Section";
 import Footer from "../../components/Footer/Footer";
 
 
@@ -8,6 +7,7 @@ import Footer from "../../components/Footer/Footer";
 import { Routes, Route, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { axios } from 'axios';
+import MediaCard from '../../components/Card/MediaCard';
 
 const Projects = () => {
     const API_URL = 'http://localhost:5000/projects';
@@ -44,14 +44,22 @@ const Projects = () => {
         <div className="App">
             {/* <Link to="/invoices">Invoices</Link> |{" "} */}
             <Header />
-            <Section />
-            {projects.map(project => (
-                <div key={project.id}>
-                    <h1>{project.name}</h1>
-                    <p>{project.description}</p>
-                    <p>{project.startDate}</p>
-                    <p>{project.text}</p>
-                </div>))}
+            <section className='cardoutercontainer'>
+                <div className='outerTitle'><h1 className='Title'>My Projects</h1></div>
+                <div className='cardContainer'>
+                    {projects.map(project => (
+                        <div className='mediacard'>
+                            <MediaCard
+                                name={project.name}
+                                description={project.description}
+                                text={project.text}
+                                slug={project.slug}
+                            />
+                        </div>
+                    ))}
+
+                </div>
+            </section>
             <Footer />
         </div>
     )
