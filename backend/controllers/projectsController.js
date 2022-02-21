@@ -44,5 +44,17 @@ const updateProject = async (req, res) => {
     });
 }
 
+//@desc  Delete a project
+//@route DELETE /projects/:slug
+//@access Public
+const deleteProject = async (req, res) => {
+    const slug = req.params.slug;
+    const project = await projectModel.findOne({ slug: slug });
+    await project.remove();
+    res.json({
+        status: 'Project Deleted'
+    });
+}
 
-module.exports = { getProjects, getProjectBySlug, setProject, updateProject };
+
+module.exports = { getProjects, getProjectBySlug, setProject, updateProject, deleteProject };
