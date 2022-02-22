@@ -1,0 +1,1 @@
+# My Simple Portfolio Project with MERN [![Netlify Status](https://api.netlify.com/api/v1/badges/2c3c0f05-4bcd-41f8-9691-030cfd1e455c/deploy-status)](https://app.netlify.com/sites/objective-edison-2e51b0/deploys)
