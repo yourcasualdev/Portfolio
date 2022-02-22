@@ -10,7 +10,7 @@ import { axios } from 'axios';
 import MediaCard from '../../components/Card/MediaCard';
 
 const Projects = () => {
-    const API_URL = 'http://localhost:5000/projects';
+    const API_URL = 'https://ibrahimbabal.herokuapp.com/projects';
     const [projects, setprojects] = useState([]);
 
     const [newProject, setNewProject] = useState('');

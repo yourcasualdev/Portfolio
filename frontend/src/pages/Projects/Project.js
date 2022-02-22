@@ -9,7 +9,7 @@ const Project = () => {
 
     const [project, setProject] = useState({});
 
-    const API_URL = 'http://localhost:5000/projects';
+    const API_URL = 'https://ibrahimbabal.herokuapp.com/projects';
     useEffect(() => {
         const fetchItems = async () => {
             try {
