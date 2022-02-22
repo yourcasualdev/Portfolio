@@ -2,7 +2,7 @@
 
 
 header{
-    background-color: #24252A;
+    background-color: #000000;
     height: 100px;
     width: 100%;
     top: 0;
@@ -26,7 +26,7 @@ header {
     padding: 30px 10%;
 }
 
-.logo {
+.headerlogo {
     cursor: pointer;
     height: 100px;
 }
@@ -58,3 +58,16 @@ button {
 button:hover {
     background-color: rgba(0, 136, 169, 0.8);
 }
+
+@media screen and (max-width: 516px) {
+    header {
+        padding: 10px 1%;
+        
+    }
+    .headerlogo {
+        height: 70px;
+    }
+    .button {
+        padding: 10px 1%;
+    }
+  }

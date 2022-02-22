@@ -1,0 +1,42 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap');
+
+.outercontainer{
+    padding-top: 100px;
+}
+
+.project-container {
+    font-size: 4vw;
+    margin-left: 10vw;
+    width: 80vw;
+    background-color: bisque;
+    border-radius: 10px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.project-title {
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Roboto Slab', serif;
+}
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 601px) {
+    .project-title {
+      font-size: 30px;
+    }
+    .project-container {
+
+    }
+  }
+  
+  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+  @media screen and (max-width: 600px) {
+    .project-title {
+      font-size: 20px;
+    }
+    .project-container {
+        width: 90vw;
+        margin-left: 5vw;
+    }
+  }

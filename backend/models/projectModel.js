@@ -11,13 +11,13 @@ const projectSchema = new mongoose.Schema(
         description: {
             type: String,
         },
+        markdown: {
+            type: String,
+            required: true
+        },
         startDate: {
             type: Date,
             required: true,
-        },
-        text: {
-            type: String,
-            required: true
         },
         slug: {
             type: String,

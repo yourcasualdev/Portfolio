@@ -16,10 +16,15 @@
   "dependencies": {
     "colors": "^1.4.0",
     "cors": "^2.8.5",
+    "dompurify": "^2.3.6",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
+    "googleapis": "^39.2.0",
+    "jsdom": "^19.0.0",
+    "marked": "^4.0.12",
     "mongoose": "^6.2.2",
     "morgan": "^1.10.0",
+    "multer": "^1.4.4",
     "slugify": "^1.6.5"
   },
   "devDependencies": {

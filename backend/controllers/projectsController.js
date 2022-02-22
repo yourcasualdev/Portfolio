@@ -37,7 +37,7 @@ const updateProject = async (req, res) => {
     project.name = req.body.name;
     project.description = req.body.description;
     project.startDate = req.body.startDate;
-    project.text = req.body.text;
+    project.markdown = req.body.markdown;
     await project.save();
     res.json({
         status: 'Project Updated'

@@ -25,7 +25,7 @@ const Projects = () => {
                 const response = await fetch(API_URL);
                 if (!response.ok) throw Error('Did not receive a response');
                 const listItems = await response.json();
-                setprojects(listItems);
+                setprojects(listItems.reverse());
                 setFetchError(null);
 
             } catch (error) {
@@ -42,25 +42,25 @@ const Projects = () => {
     }, [])
     return (
         <div className="App">
-            {/* <Link to="/invoices">Invoices</Link> |{" "} */}
-            <Header />
-            <section className='cardoutercontainer'>
-                <div className='outerTitle'><h1 className='Title'>My Projects</h1></div>
-                <div className='cardContainer'>
-                    {projects.map(project => (
-                        <div className='mediacard'>
-                            <MediaCard
-                                name={project.name}
-                                description={project.description}
-                                text={project.text}
-                                slug={project.slug}
-                            />
-                        </div>
-                    ))}
+            <div className="content">
+                <section className='cardoutercontainer'>
+                    <div className='outerTitle'><h1 className='Title'>My Projects</h1></div>
+                    <div className='cardContainer'>
+                        {projects.map(project => (
+                            <div className='mediacard'>
+                                <MediaCard
+                                    name={project.name}
+                                    description={project.description}
+                                    text={project.text}
+                                    slug={project.slug}
+                                />
+                            </div>
+                        ))}
 
-                </div>
-            </section>
-            <Footer />
+                    </div>
+                </section>
+            </div>
+
         </div>
     )
 }
