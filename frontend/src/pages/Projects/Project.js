@@ -3,26 +3,13 @@ import { useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
 import './project.css'
+import { data } from '../../data/data'
 
 const Project = () => {
     const slug = useLocation().pathname.split('/')[2];
 
-    const [project, setProject] = useState({});
+    const project = data.find(project => project.slug === slug);
 
-    const API_URL = 'https://ibrahimbabal.herokuapp.com/projects';
-    useEffect(() => {
-        const fetchItems = async () => {
-            try {
-                const response = await fetch(`${API_URL}/${slug}`);
-                if (!response.ok) throw Error('Did not receive a response');
-                const jsonResponse = await response.json();
-                setProject(jsonResponse);
-            } catch (error) {
-                console.log(error);
-            }
-        }
-        fetchItems();
-    }, []);
 
     return (
         <div className='content'>
@@ -35,7 +22,7 @@ const Project = () => {
                         <p>{project.description}</p>
                     </div>
                     <div className='project-text'>
-                        <ReactMarkdown>{project.markdown}</ReactMarkdown>
+                        <ReactMarkdown>{project.text}</ReactMarkdown>
                     </div>
                 </div>
             </div>

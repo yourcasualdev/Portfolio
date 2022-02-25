@@ -29,10 +29,13 @@ header {
 .headerlogo {
     cursor: pointer;
     height: 100px;
+    flex: 1;
+    padding: 10px;
 }
 
 .nav__links {
     list-style: none;
+    flex: 1;
 }
 
 .nav__links li {
@@ -53,13 +56,14 @@ button {
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+    flex:1;
 }
 
 button:hover {
     background-color: rgba(0, 136, 169, 0.8);
 }
 
-@media screen and (max-width: 516px) {
+@media screen and (max-width: 600px) {
     header {
         padding: 10px 1%;
         
@@ -69,5 +73,9 @@ button:hover {
     }
     .button {
         padding: 10px 1%;
+    }
+    .nav__links {
+        font-size: 1rem;
+        display: flex;
     }
   }

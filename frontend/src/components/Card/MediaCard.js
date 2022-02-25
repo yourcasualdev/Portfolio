@@ -8,18 +8,18 @@ import Typography from '@mui/material/Typography';
 import reptile from './reptile.jpg'
 import { display } from '@mui/system';
 
-export default function MediaCard({ name, description, text, slug }) {
+export default function MediaCard({ name, description, slug, img }) {
     return (
         <div className='mediacard'>
             <Card sx={{ width: 350, }} key={slug} className="mediaCard">
                 <CardMedia
                     component="img"
                     height="140"
-                    image={reptile}
-                    alt="green iguana"
+                    src={img}
+                    alt={name}
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
+                    <Typography gutterBottom variant="h5" component="div" color={"black"}>
                         {name}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">

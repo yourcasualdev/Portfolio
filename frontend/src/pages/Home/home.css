@@ -1,32 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.outerContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+.profile-container{
+/* background-color: #a0591f; */
+width: 100%;
+padding-top: 220px;
+text-align: center;
+align-items: center;
+font-family: montserrat, sans-serif;
+}
+.profile-info-hello {
+    color: rgb(167, 167, 167);
+    font-size: 2vw;
+    font-weight: 100;
+    margin-bottom: 10px;
+    animation: name ;
+    animation-duration: .5s;
+
 }
 
-.card{
-    width: 750px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 50px auto 0 auto;
+.profile-info-name {
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    font-family: 'Urbanist', sans-serif;
+    animation: name;
+    animation-duration: 1s;
+
 }
 
-.profilepic{
-    margin-right: 75px;
-    border-radius: 50px;
+@media only screen and (max-width: 600px) {
+    .profile-info-hello {
+        font-size: 3vw;
+    }
+    .profile-info-name {
+        font-size: 6vw;
+    }
+  }
+
+
+@keyframes name {
+      from {
+          transform: translateY(-10px);
+          opacity: .5;
+      }
+        to {
+            transform: translateY(0px);
+            opacity: 1;
+        }
 }
 
-.description{
-    background: #dadada;
-    border: 2px solid #bbbbbb;
-    padding: 25px;
-    border-radius: 25px;
+@keyframes hello {
+
+    
 }
